@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return password;
     }
 
-    // Update password length display when slider value changes
+    //  Atualizar o valor do slider quando o usuário arrasta o controle deslizante ( escolher o tamanho da senha)
     const slider = document.getElementById("slider");
     const valueSpan = document.getElementById("valor");
     slider.addEventListener("input", function () {
         valueSpan.textContent = this.value;
     });
 
-    // Generate and display password when the button is clicked
+    //  Gerer a senha quando o botão é clicado e exibir a senha gerada ( Gerar sua senha )
     const generateButton = document.getElementById("button");
     const passwordContainer = document.getElementById("conteiner-password");
     const passwordSpan = document.getElementById("password");
@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         passwordContainer.classList.remove("hide");
     });
 
-    // Copy password to clipboard when password is clicked
     passwordSpan.addEventListener("click", function () {
         const textArea = document.createElement("textarea");
         textArea.value = passwordSpan.textContent;
